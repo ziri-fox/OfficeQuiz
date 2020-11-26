@@ -230,9 +230,9 @@ function submitButton() {
     event.preventDefault();
     let chosenAnswer = $('input[name = "question"]:checked').val();
     let rightAnswer = store.questions[store.questionNumber].correctAnswer;
-    let correctAnswerPage = `<div class = "center"><h2>You got that one right! Im so proud of you</h2>
+    let correctAnswerPage = `<div class = "center"><h2>You got that one right! Im so proud of you</h2><br>
     <button id="next-button">Next</button></div>`;
-    let wrongAnswerPage = `<div class ="center"><h2>Actually that's not true, I know the question you were trying to answer and the answer was: ${rightAnswer} </h2><button id="next-button">Next</button></div>`;
+    let wrongAnswerPage = `<div class ="center"><h2>Actually that's not true, I know the question you were trying to answer and the answer was: ${rightAnswer} </h2><br><button id="next-button">Next</button></div>`;
     if (chosenAnswer === rightAnswer) {
       store.score++;
       $('main').html(correctAnswerPage);
